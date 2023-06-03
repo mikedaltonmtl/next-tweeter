@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header class="userHeader">
+    <header className="userHeader">
       <Image
         src="/profile-hex.png"
         alt="user profile image"

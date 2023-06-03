@@ -1,7 +1,8 @@
-import styles from './page.module.css';
 import Navigation from '@/components/Navigation';
 import Header from '@/components/Header';
 import NewTweet from '@/components/NewTweet';
+import TweetList from '@/components/TweetList';
+import ToTopButton from '@/components/ToTopButton';
 
 export default function Home() {
   return (
@@ -14,9 +15,15 @@ export default function Home() {
 
       {/* Page-specific (main) content here */}
       <main className="container">
+
+        {/* New Tweet Form */}
         <NewTweet />
 
+        {/* Current tweets display */}
+        <TweetList />
 
+        {/* To top button */}
+        <ToTopButton />
 
       </main>
     </>
