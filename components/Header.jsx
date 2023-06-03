@@ -8,6 +8,8 @@ export default function Header() {
       <Image
         src="/profile-hex.png"
         alt="user profile image"
+        width={ 256 }
+        height={ 256 }
         priority
       />
       <h2>Your Name</h2>
