@@ -26,12 +26,14 @@ export default function Home() {
       top: 0,
       behavior: "smooth",
     });
+    const newTweetText = document.getElementById("tweet-text");
+    newTweetText.focus();
   };
 
   return (
     <>
       {/* Navigation Bar (fixed at top of page) */}
-      <Navigation />
+      <Navigation goToTop={ goToTop } />
 
       {/* Header showing user avatar & name */}
       <Header />

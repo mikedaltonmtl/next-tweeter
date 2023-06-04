@@ -2,11 +2,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navigation() {
+export default function Navigation({ goToTop }) {
   return (
     <nav>
       <span>tweeter</span>
-      <div>
+      <div onClick={ goToTop }>
         <strong>Write</strong> a new tweet<br />
         <FontAwesomeIcon
           id="new-tweet-arrow"

@@ -128,6 +128,7 @@ p#validation-error {
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 20px;
+  padding-top: 5px;
 }
 
 #form-footer  button {
