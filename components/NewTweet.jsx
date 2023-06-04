@@ -1,6 +1,7 @@
 // New Tweet form
 import { useEffect, useState } from 'react';
 import { slideUp, slideDown } from '../helpers/slideUpDown';
+import { createTweet } from '../helpers/newTweet';
 
 
 export default function NewTweet() {
@@ -40,6 +41,9 @@ export default function NewTweet() {
       slideDown(errorMessage, 700);
       return;
     }
+
+    // Create new tweet now that validation is complete
+    createTweet(tweetText);
   };
 
   // Clear any validation messages when user focuses on textbox
