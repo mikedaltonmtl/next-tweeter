@@ -2,7 +2,7 @@
 import Tweet from "./Tweet";
 import TimeAgo from 'react-timeago';
 
-// escape any 'unsafe' characters from the tweet content
+// Escape any 'unsafe' characters from the tweet content
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

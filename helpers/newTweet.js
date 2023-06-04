@@ -32,7 +32,7 @@ const createTweet = function(content) {
   const avatarArray = avatars[gender];
   const userAvatar = avatarArray[Math.floor(Math.random() * avatarArray.length)];
 
-  const newTweet = {
+  return {
     user: {
       name: userName,
       avatar: userAvatar,

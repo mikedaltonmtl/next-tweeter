@@ -4,7 +4,7 @@ import { slideUp, slideDown } from '../helpers/slideUpDown';
 import { createTweet } from '../helpers/newTweet';
 
 
-export default function NewTweet() {
+export default function NewTweet({ addToFeed }) {
 
   const maxLength = 140;
   const [charsRemaining, setCharsRemaining] = useState(maxLength);
@@ -43,7 +43,11 @@ export default function NewTweet() {
     }
 
     // Create new tweet now that validation is complete
-    createTweet(tweetText);
+    const newTweet = createTweet(tweetText);
+    const tweetInput = document.getElementById("tweet-text");
+    tweetInput.value = "";
+    setTweetText("");
+    addToFeed(newTweet);
   };
 
   // Clear any validation messages when user focuses on textbox

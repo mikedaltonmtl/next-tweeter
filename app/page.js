@@ -13,7 +13,7 @@ export default function Home() {
   const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 200) {
         setShowTopBtn(true);
       } else {
         setShowTopBtn(false);
@@ -30,6 +30,15 @@ export default function Home() {
     newTweetText.focus();
   };
 
+  // Handle adding new tweet to feed
+  const [tweetFeed, setTweetFeed] = useState(initialTweets);
+
+  const addToFeed = function(newTweet) {
+    const currentFeed = tweetFeed;
+    const updatedFeed = [ newTweet, ... currentFeed];
+    setTweetFeed(updatedFeed);
+  };
+
   return (
     <>
       {/* Navigation Bar (fixed at top of page) */}
@@ -38,16 +47,14 @@ export default function Home() {
       {/* Header showing user avatar & name */}
       <Header />
 
-      {/* Page-specific (main) content here */}
+      {/* Page-specific (main) content */}
       <main className="container">
 
         {/* New Tweet Form */}
-        <NewTweet />
+        <NewTweet addToFeed={ addToFeed } />
 
         {/* Current tweets display */}
-        <TweetList
-          tweets={ initialTweets }
-        />
+        <TweetList tweets={ tweetFeed } />
 
         {/* To top button - only visible on scroll down */}
         {showTopBtn && (

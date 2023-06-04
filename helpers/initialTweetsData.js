@@ -8,7 +8,7 @@ const initialTweets = [
     content: {
       text: "If I have seen further it is by standing on the shoulders of giants"
     },
-    createdAt: 1685632253118
+    createdAt: 1685718653118
   },
   {
     user: {
@@ -19,7 +19,7 @@ const initialTweets = [
     content: {
       text: "Je pense , donc je suis"
     },
-    createdAt: 1685718653118
+    createdAt: 1685632253118
   }
 ];
 

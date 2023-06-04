@@ -225,7 +225,6 @@ article.tweet:hover {
   bottom: 5px;
   right: 0px;
   z-index: 999;
-  transition: visibility 0.3s;
 }
 
 #bottom-button:hover {
