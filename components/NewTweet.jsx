@@ -47,6 +47,7 @@ export default function NewTweet({ addToFeed }) {
     const tweetInput = document.getElementById("tweet-text");
     tweetInput.value = "";
     setTweetText("");
+    setCharsRemaining(maxLength);
     addToFeed(newTweet);
   };
 

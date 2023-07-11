@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import NewTweet from '@/components/NewTweet';
 import TweetList from '@/components/TweetList';
 import ToTopButton from '@/components/ToTopButton';
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { initialTweets } from '../helpers/initialTweetsData';
 
@@ -41,6 +42,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Tweeter</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       {/* Navigation Bar (fixed at top of page) */}
       <Navigation goToTop={ goToTop } />
 
